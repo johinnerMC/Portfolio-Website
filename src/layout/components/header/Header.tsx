@@ -4,7 +4,14 @@ import { useState } from "react";
 import "./header.css";
 import { NavItem } from "./NavItem";
 
-const navData: string[] = ["Home", "About", "Skills", "Portfolio", "Contact"];
+const navData: string[] = [
+  "Home",
+  "About",
+  "Skills",
+  "Portfolio",
+  "Contact",
+  "writing",
+];
 
 export const Header = () => {
   /*=============== Change Background eader ===============*/

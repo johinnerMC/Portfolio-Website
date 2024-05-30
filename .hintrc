@@ -6,6 +6,7 @@
     "disown-opener": "off",
     "axe/name-role-value": "off",
     "typescript-config/is-valid": "off",
-    "no-inline-styles": "off"
+    "no-inline-styles": "off",
+    "typescript-config/consistent-casing": "off"
   }
 }
