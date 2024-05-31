@@ -3,14 +3,29 @@
 import { useState } from "react";
 import "./header.css";
 import { NavItem } from "./NavItem";
+import { NavLink } from "react-router-dom";
 
-const navData: string[] = [
-  "Home",
-  "About",
-  "Skills",
-  "Portfolio",
-  "Contact",
-  "writing",
+interface navItem {
+  name: string;
+  iconClass: string;
+  href: string;
+}
+const navData: navItem[] = [
+  {
+    name: "Home",
+    iconClass: "uil-estate",
+    href: "/home",
+  },
+  {
+    name: "Portfolio",
+    iconClass: "uil-scenery",
+    href: "/portfolio",
+  },
+  {
+    name: "Writing",
+    iconClass: "uil-file-alt",
+    href: "/writing",
+  },
 ];
 
 export const Header = () => {
@@ -30,16 +45,18 @@ export const Header = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="index.html" className="nav__logo">
+        <NavLink to="/home" className="nav__logo">
           Johinner
-        </a>
+        </NavLink>
 
         <div className={`nav__menu ${showMenu && "show-menu"}`}>
           <ul className="nav__list grid">
             {navData.map((item) => (
               <NavItem
-                name={item}
-                key={item}
+                name={item.name}
+                key={item.href}
+                icon={item.iconClass}
+                href={item.href}
                 activeNav={activeNav}
                 setActiveNav={setActiveNav}
               />

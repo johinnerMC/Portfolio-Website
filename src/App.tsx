@@ -2,13 +2,13 @@
 
 import "./App.css";
 import { AppLayout } from "./layout/AppLayout";
-import { HomePage } from "./pages";
+import { AppRoutes } from "./routes/AppRoutes";
 
 function App() {
   return (
     <>
       <AppLayout>
-        <HomePage />
+        <AppRoutes />
       </AppLayout>
     </>
   );
