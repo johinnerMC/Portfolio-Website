@@ -1,6 +1,5 @@
 /** @format */
 
-import { NavLink } from "react-router-dom";
 interface Props {
   name: string;
   setActiveNav: (name: string) => void;
@@ -17,13 +16,13 @@ export const NavItem = ({
 }: Props) => {
   return (
     <li className="nav__item">
-      <NavLink
-        to={href}
+      <a
+        href={href}
         onClick={() => setActiveNav(name)}
         className={`${activeNav === name && "active-link"} nav__link `}
       >
         <i className={`uil ${icon} nav__icon`}></i> {name}
-      </NavLink>
+      </a>
     </li>
   );
 };

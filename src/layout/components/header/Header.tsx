@@ -14,17 +14,32 @@ const navData: navItem[] = [
   {
     name: "Home",
     iconClass: "uil-estate",
-    href: "/home",
+    href: "#home",
+  },
+  {
+    name: "About",
+    iconClass: "uil-user",
+    href: "#about",
+  },
+  {
+    name: "Skills",
+    iconClass: "uil-file-alt",
+    href: "#skills",
   },
   {
     name: "Portfolio",
     iconClass: "uil-scenery",
-    href: "/portfolio",
+    href: "#portfolio",
   },
   {
     name: "Writing",
     iconClass: "uil-file-alt",
     href: "/writing",
+  },
+  {
+    name: "Contact",
+    iconClass: "uil-message",
+    href: "#contact",
   },
 ];
 
